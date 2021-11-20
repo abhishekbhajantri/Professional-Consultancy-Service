@@ -24,7 +24,6 @@ export class LoginComponent implements OnInit {
     // var emp = this.employeeList.find((emp) => emp.username === this.Username);
     // if (emp != null && emp.password === this.Password) {
     if(this.Username === "admin" && this.Password === "admin123") {
-      alert('Logged In');
       this.router.navigateByUrl('/employees');
     } else {
       alert('Invalid Credentials');

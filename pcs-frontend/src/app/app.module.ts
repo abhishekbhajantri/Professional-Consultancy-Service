@@ -8,13 +8,17 @@ import { EmployeeComponent } from './employee/employee.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { EmployerComponent } from './employer/employer.component';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     EmployeeComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    EmployerComponent,
+    EmployeeDetailsComponent
   ],
   imports: [
     BrowserModule,

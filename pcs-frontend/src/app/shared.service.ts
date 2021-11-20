@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Employee } from './employee';
 
 
 @Injectable({
@@ -8,7 +9,9 @@ import { Observable } from 'rxjs';
 })
 export class SharedService {
 
-  readonly url = "https://localhost:5001/";
+  readonly url = "http://localhost:8080/";
+
+  private baseUrl = "http://localhost:8080/employees/";
 
   constructor(private http: HttpClient) { }
 
@@ -16,12 +19,16 @@ export class SharedService {
     return this.http.post(this.url, employee);
   }
 
-  getEmployee(id: number) {
-    return this.http.get(this.url + `/${id}`);
+  createEmployee(employee : Employee): Observable<Object>{
+    return this.http.post(this.url+"employees/create", employee);
+  }
+
+  getEmployeeById(id: number) {
+    return this.http.get(`${this.baseUrl}/getby/${id}`)
   }
 
   getEmployeeList(): Observable<any> {
-    return this.http.get(this.url);
+    return this.http.get(this.url+"employees/all");
   }
 
 
