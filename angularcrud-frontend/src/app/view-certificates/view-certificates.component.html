@@ -1,0 +1,9 @@
+<app-navbar1></app-navbar1>
+<h3>Certificates </h3>
+<div >
+    <div *ngFor="let cert of certificates">
+        <label><b>ID: {{cert.certificateId}}</b></label>
+        <label><b>Name: {{cert.certificateName}} </b></label>
+        <p><b>Description: {{cert.certificateDesc}} </b></p>
+    </div>
+</div>

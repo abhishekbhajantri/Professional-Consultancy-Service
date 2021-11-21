@@ -15,18 +15,47 @@ export class EmployeeListComponent implements OnInit {
   employees: Employee[] = [];
   ngOnInit(): void {
     this.getemployees();
+    // this.empnames();
   }
+
+  enames:any[] =[];
+  // empnames()
+  // {
+  //   console.log("akwjbh");
+  //   for(let c of this.employees)
+  //   {
+  //     this.enames.push(c.firstName);
+  //   }
+  //   console.log(this.enames);
+  // }
+
+  searchText = '';
+  characters = [
+    'Ant-Man',
+    'Aquaman',
+    'Asterix',
+    'The Atom',
+    'The Avengers',
+    'Batgirl',
+    'Batman',
+    'Batwoman'
+  ]
 
   private getemployees()
   {
     this.employeeService.getEmployeesList().subscribe(data => {
-    this.employees = data;
-    console.log(data);
+      this.employees = data;
+      for(let c of data)
+      {
+        this.enames.push(c.firstName);
+      }
+      console.log(data);
+
   });
 }
-  updateEmployee(id: number)
+  updateEmployee(employeeId: number)
   {
-    this.router.navigate(['update-employee',id]);
+    this.router.navigate(['update-employee',employeeId]);
   }
 
   deleteEmployee(id: number)

@@ -8,29 +8,29 @@ import { Employee } from './employee';
 })
 export class EmployeeService {
 
-  private baseUrl="http://localhost:9001/api/v1/employees";
+  private baseUrl = "http://localhost:8080/employees/";
   constructor(private httpClient : HttpClient) { }
 
   getEmployeesList() : Observable<Employee[]>{
-    return this.httpClient.get<Employee[]>(`${this.baseUrl}`);
+    return this.httpClient.get<Employee[]>(`${this.baseUrl}/all`);
   }
 
   createEmployee(employee : Employee): Observable<Object>{
-    return this.httpClient.post(`${this.baseUrl}`, employee);
+    return this.httpClient.post(`${this.baseUrl}create`, employee);
   }
 
   getEmployeeById(id: number): Observable<Employee>
   {
-    return this.httpClient.get<Employee>(`${this.baseUrl}/${id}`);
+    return this.httpClient.get<Employee>(`${this.baseUrl}/getby/${id}`);
   }
 
   updateEmployee(id: number, employee: Employee): Observable<Object>
   {
-    return this.httpClient.put(`${this.baseUrl}/${id}`,employee);
+    return this.httpClient.put(`${this.baseUrl}/update/${id}`,employee);
   }
 
   deleteEmployee(id: number):Observable<Object>
   {
-    return this.httpClient.delete(`${this.baseUrl}/${id}`);
+    return this.httpClient.delete(`${this.baseUrl}/delete/${id}`);
   }
 }
