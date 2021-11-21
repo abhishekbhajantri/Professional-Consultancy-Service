@@ -31,5 +31,8 @@ export class SharedService {
     return this.http.get(this.url+"employees/all");
   }
 
+  getSkillsList(): Observable<any>{
+    return this.http.get(this.url+"skills/all");
+  }
 
 }

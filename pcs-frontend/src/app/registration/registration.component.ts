@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Employee } from '../employee';
 import { SharedService } from '../shared.service';
+import { Skill } from '../skill';
 
 @Component({
   selector: 'app-registration',
@@ -24,8 +25,18 @@ export class RegistrationComponent implements OnInit {
   // password?: string;
   // password2?: string;
   employee: Employee = new Employee();
-  ngOnInit(): void {}
+  skills: Skill[] = [];
+  ngOnInit(): void {
+    // this.getSkills()
+  }
 
+  // private getSkills()
+  // {
+  //   this.shared.getSkillsList().subscribe(data => {
+  //   this.skills = data;
+  //   console.log(data);
+  //   });
+  // }
   Register() {
     this.shared.createEmployee(this.employee).subscribe(data=>{
       console.log(this.employee);
