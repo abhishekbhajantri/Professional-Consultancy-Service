@@ -1,0 +1,158 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+    <div class="form-group row">
+        <!-- <label class="col-sm-2 col-form-label">Employee ID</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="employeeId"
+            placeholder="Enter Employee ID"
+          />
+        </div> -->
+        <br><br>
+        <label class="col-sm-2 col-form-label">First Name</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="employee.firstName"
+            placeholder="Enter First Name"
+          />
+        </div>
+        <br><br>
+        <label class="col-sm-2 col-form-label">Last Name</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="employee.lastName"
+            placeholder="Enter Last Name"
+          />
+        </div>
+        <br><br>
+        <label class="col-sm-2 col-form-label">Email ID</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="employee.emailId"
+            placeholder="Enter Email ID"
+          />
+        </div>
+        <br><br>
+        <label class="col-sm-2 col-form-label">Age</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="employee.age"
+            placeholder="Enter Employee Age"
+          />
+        </div>
+        <br><br>
+        <label class="col-sm-2 col-form-label">Sex</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="employee.sex"
+            placeholder="Enter Employee Sex"
+          />
+        </div>
+        <br><br>
+        <label class="col-sm-2 col-form-label">Address</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="employee.address"
+            placeholder="Enter Address"
+          />
+        </div>
+        <br><br>
+        <label class="col-sm-2 col-form-label">Role</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="employee.role"
+            placeholder="Enter Role"
+          />
+        </div>
+        <br><br>
+        <label class="col-sm-2 col-form-label">Phone Number</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="employee.phoneNo"
+            placeholder="Enter Phone Number"
+          />
+        </div>
+        <br><br>
+        <!-- <label class="col-sm-2 col-form-label">Skills</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="employee.skills"
+            placeholder="Enter skill"
+          />
+        </div> -->
+        <!-- <div class="col-sm-10">
+          <label class="col-sm-2 col-form-label">Skills</label>
+          <select class="form-control">
+          <option *ngFor="let skill of skills" value="">{{skill.skillName}}</option>
+          </select>
+
+        </div> -->
+        <!-- <label class="col-sm-2 col-form-label">Username</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="username"
+            placeholder="Enter Username"
+          />
+        </div>
+        <br><br>
+  
+        <label class="col-sm-2 col-form-label">New Password</label>
+        <div class="col-sm-10">
+          <input
+            type="password"
+            class="form-control"
+            [(ngModel)]="password"
+            placeholder="Enter New Password"
+          />
+        </div>
+        <br><br>  
+
+        <label class="col-sm-2 col-form-label">Reenter Password</label>
+        <div class="col-sm-10">
+            <input
+              type="password"
+              class="form-control"
+              [(ngModel)]="password2"
+              placeholder="Reenter Password"
+            />
+          </div> -->
+          <br><br>  
+    </div>
+</div>
+  
+  <button
+    (click)="Register()"
+    class="btn btn-primary"
+  >
+    Register
+  </button>
+  <br><br>
+  <button
+    (click)="GoBack()"
+    class="btn btn-primary"
+  >
+    Back
+  </button>
+
+

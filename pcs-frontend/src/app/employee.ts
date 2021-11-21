@@ -1,3 +1,5 @@
+import { Skill } from "./skill";
+
 export class Employee {
 
     employeeId?: number;
@@ -9,6 +11,8 @@ export class Employee {
     phoneNo?: string;
     address?: string;
     role?: string;
+
+    // skills!: string;
     // username?: string;
     // password?: string;
     // password2?: string;
